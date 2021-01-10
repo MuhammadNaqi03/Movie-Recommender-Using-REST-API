@@ -1,5 +1,5 @@
 # Movie-Recommender-Using-REST-API
-In this script TasteDive API and OMDB API is being used to give movie recommendations.\
+In this script TasteDive API and OMDB API are being used to give movie recommendations.\
 It takes a list of movies and gives top 10 movie recommendation for each movies with ratings,genres and plots (sorted by ratings).
 
 About the APIs:
