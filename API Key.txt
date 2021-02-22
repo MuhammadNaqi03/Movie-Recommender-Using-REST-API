@@ -1,4 +1,0 @@
-TasteDive API: 396478-personal-CXMA38Q6
-
-OMDB API: b0c0319d 
-Format: OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=b0c0319d
