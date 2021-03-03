@@ -46,8 +46,8 @@ def get_data_from_tastedive(movie_name):
     '''
     
     #Request pattern https://tastedive.com/read/api
-    #API Key: 396478-personal-CXMA38Q6  (Limit:300 per hour)
-    parameters  = {"q":movie_name, "type": "movies", "limit":10, "k":"396478-personal-CXMA38Q6"}
+    #Please replace your API key in place of "Your_API_Key_here"
+    parameters  = {"q":movie_name, "type": "movies", "limit":10, "k":"Your_API_Key_here"}
     testdive_response = requests.get("https://tastedive.com/api/similar",params=parameters)
     #url = testdive_response.url
     #print(url)
@@ -93,8 +93,8 @@ def get_data_from_OMDB(movie_name):
     a json object to get_info()
     '''
     #Request format https://www.omdbapi.com/
-    #API key = b0c0319d (Limit: 1000 Daily)
-    parameters = {"t":movie_name ,"r":"json", "apikey":"b0c0319d"}
+    #Please replace your API key in place of "Your_API_Key_here"
+    parameters = {"t":movie_name ,"r":"json", "apikey":"Your_API_Key_here"}
     OMDB_response = requests.get("https://www.omdbapi.com/",params=parameters)
     returned_object = json.loads(OMDB_response.text)
     #print(OMDB_response.url)
