@@ -43,6 +43,7 @@ def get_data_from_tastedive(movie_name):
     '''
     Takes movie name as input and gets the related movie title by sending 
     json object to get_movie_titles()
+    returns the movie titles
     '''
     
     #Request pattern https://tastedive.com/read/api
@@ -62,6 +63,7 @@ def get_data_from_tastedive(movie_name):
 def get_movie_titles(dic):
     '''
     Takes a json object as input and gets the related movie title 
+    returns the movie title list
     '''
     #extracting the list of similar movies
     movie_list = dic["Similar"]["Results"]
@@ -73,8 +75,8 @@ def get_movie_titles(dic):
 
 def get_related_movies(ls):
     '''
-    Takes a movie list and gets related movies from get_data_from_tastedive and 
-    gets data for unique movies from get_data_from_OMDB()
+    Takes a movie list and gets related movies from get_data_from_tastedive
+    returns the unique similar movie list
     '''
     combined_movies = []
     for i in range(len(ls)):
@@ -91,6 +93,7 @@ def get_data_from_OMDB(movie_name):
     '''
     Takes a movie name as input and returns the infos of the movie by passing
     a json object to get_info()
+    returns movie info
     '''
     #Request format https://www.omdbapi.com/
     #Please replace your API key in place of "Your_API_Key_here"
@@ -106,6 +109,7 @@ def get_data_from_OMDB(movie_name):
 def get_info(dic):
     '''
     Takes a json object and returns relevant info as a tuple
+    returns a tuple of movie info
     '''
     movie_title = dic["Title"]
     movie_genre = dic["Genre"]
